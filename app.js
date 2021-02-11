@@ -16,11 +16,6 @@ app.get('/login', (req, res) => {
 
 app.post('/login', (req, res) => {
     const { username, password } = req.body
-    if (username === 'username' && password === 'password') {
-        res.redirect('/secure')
-    } else {
-        res.redirect('/login')
-    }
 })
 
 app.get('/secure', (req, res) => {
@@ -30,4 +25,3 @@ app.get('/secure', (req, res) => {
 app.listen(3000, () => {
     console.log(`Server started on port`);
 });
-
